@@ -56,10 +56,17 @@ while (valor < 10 || valor > 25) {
 
 const todosMayores = array.every(elemento => elemento > Number(valor));
 
+const todosIntermedios= array.every(elemento => elemento == Number(valor));
+
+const todosMenores= array.every(elemento => elemento < Number(valor));
+
 if (todosMayores) {
-    alert("Todos los elementos son mayores que " + valor);
-} else {
+    alert("La mayoria de los elementos son mayores que " + valor);
+} else if(todosIntermedios) {
     alert("No todos los elementos son mayores que " + valor);
+} else {
+
+
 }
 
 
