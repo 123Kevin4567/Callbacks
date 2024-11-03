@@ -8,37 +8,60 @@
 
 
 
-function miEvery(array, callback) {
+// function miEvery(array, callback) {
 
-    for (let i = 0; i < array.length; i++) {
+//     for (let i = 0; i < array.length; i++) {
         
-        if (!callback(array[i])) { // Si algún elemento NO cumple la condición
+//         if (!callback(array[i])) { // Si algún elemento NO cumple la condición
             
-            return false; // Devolvemos false inmediatamente
-        }
-    }
+//             return false; // Devolvemos false inmediatamente
+//         }
+//     }
     
     
-    return true; // Si llegamos aquí, todos los elementos cumplieron la condición
-}
+//     return true; // Si llegamos aquí, todos los elementos cumplieron la condición
+// }
+
+
+// const array = [10, 12, 15, 20, 25];
+ 
+
+// const valor = prompt("Ingrese un valor para verificar si todos los elementos son mayores a este valor:");
+
+
+// if (valor < 10 || valor > 25) {
+//     valor = prompt("Número fuera de rango. Por favor, ingrese un número entre 10 y 25");
+// }
+
+// const todosMayores = miEvery(array, function(elemento) {
+//     return elemento > Number(valor); 
+// });
+
+
+// if (todosMayores) {
+//     alert("Todos los elementos son mayores que " + valor);
+// } else {
+//     alert("No todos los elementos son mayores que " + valor);
+// }
 
 
 const array = [10, 12, 15, 20, 25];
 
+let valor = prompt("Ingrese un valor para verificar si todos los elementos son mayores a este valor:");
 
-const valor = prompt("Ingrese un valor para verificar si todos los elementos son mayores a este valor:");
+while (valor < 10 || valor > 25) {
+    valor = prompt("Número fuera de rango. Por favor, ingrese un número entre 10 y 25");
+}
 
 
-const todosMayores = miEvery(array, function(elemento) {
-    return elemento > Number(valor); 
-});
-
+const todosMayores = array.every(elemento => elemento > Number(valor));
 
 if (todosMayores) {
     alert("Todos los elementos son mayores que " + valor);
 } else {
     alert("No todos los elementos son mayores que " + valor);
 }
+
 
 
 

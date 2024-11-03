@@ -24,6 +24,7 @@ function imprimirNumeros(desde, hasta, usarInterval = true) {
     else {
         function imprimir() {
             console.log(numero);
+            
             if (numero < hasta) {
                 numero++;
                 setTimeout(imprimir, 1000);
