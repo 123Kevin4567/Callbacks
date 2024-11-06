@@ -6,32 +6,18 @@
 
 
 
-// function miSome(array, callback) {
 
-//     for (let i = 0; i < array.length; i++) {
 
-//         if (callback(array[i])) {
-           
-//             return true;  // Devolvemos true inmediatamente
-//         }
-//     }
-    
-    
-//     return false; // Si llegamos aquí, ningún elemento cumplió la condición
-// }
+// VERSION SIMPLE Y RECORTADA
 
 
 // const array = [2, 5, 8, 10, 15];
 
-
 // const valor = prompt("Ingrese un valor para verificar si algún elemento es mayor a este valor:");
 
-// // Convertimos el valor ingresado a número y usamos miSome para verificar el array
-// const algunMayor = miSome(array, function(elemento) {
-//     return elemento > Number(valor); // Callback que verifica si algún elemento es mayor al valor ingresado
-// });
 
-// // Mostramos el resultado al usuario
+// const algunMayor = array.some(elemento => elemento > Number(valor));
+
 // if (algunMayor) {
 //     alert("Al menos un elemento es mayor que " + valor);
 // } else {
@@ -40,18 +26,61 @@
 
 
 
+// VERSION FINAL
 
-
-const array = [2, 5, 8, 10, 15];
-
-const valor = prompt("Ingrese un valor para verificar si algún elemento es mayor a este valor:");
-
-
-const algunMayor = array.some(elemento => elemento > Number(valor));
-
-if (algunMayor) {
-    alert("Al menos un elemento es mayor que " + valor);
-} else {
-    alert("Ningún elemento es mayor que " + valor);
+function some(array, callback) {
+    for (let i = 0; i < array.length; i++) {
+        if (callback(array[i])) {
+            return true;
+        }
+    }
+    return false;
 }
+
+
+const arrayInput = prompt("Ingrese una lista de números separados por comas (por ejemplo: 2,5,8,10,15):");
+const array = arrayInput.split(',').map(Number); 
+
+
+if (array.some(isNaN)) {
+    alert("Lo siento Bob no contien numeros, recuerda solo numeros");
+} else {
+    const valor = Number(prompt("Ingrese un valor para comparar:"));
+
+    if (isNaN(valor)) {
+        alert("Otra vez Bob un valor numerico valido OjO.");
+    } else {
+
+        const comparacion = prompt("Elija el tipo de comparación:\n1: Mayor que\n2: Menor que\n3: Igual a");
+
+        let mensaje;
+        switch (comparacion) {
+            case "1":
+                mensaje = some(array, elemento => elemento > valor)
+                    ? `Al menos un elemento es mayor que ${valor}.`
+                    : `Ningún elemento es mayor que ${valor}.`;
+                break;
+
+            case "2":
+                mensaje = some(array, elemento => elemento < valor)
+                    ? `Al menos un elemento es menor que ${valor}.`
+                    : `Ningún elemento es menor que ${valor}.`;
+                break;
+
+            case "3":
+                mensaje = some(array, elemento => elemento === valor)
+                    ? `Al menos un elemento es igual a ${valor}.`
+                    : `Ningún elemento es igual a ${valor}.`;
+                break;
+
+            default:
+                mensaje = "Opción de comparación no válida.";
+                break;
+        }
+
+        alert(mensaje);
+    }
+}
+
+
 

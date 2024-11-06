@@ -20,10 +20,8 @@ for(let j = 0; j < 10000000; j++) {
 
 // a) Después del bucle
 
-// Explicación:
+//Por lo que alert debe mostar un valor de 100000000
 
-// Se supone que el setTimeout esta programado para ejecutarse despues de 100ms pero debido a que
-// el bucle sigue correindo ya que se el puso que el i se incrementara hasta 1000000 el bucle seguira hasta terminarlo
-// Por lo que el callback no se ejecutara mientras el bucle este corriendo
+
 
 
