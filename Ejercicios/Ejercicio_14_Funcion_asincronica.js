@@ -1,3 +1,7 @@
+// Nota:Algunos ejercicios los hare que se proyecten en el la pagina y no en el ventana como para variar
+
+
+
 
 async function operacionAsincrona() {
 
