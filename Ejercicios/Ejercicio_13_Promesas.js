@@ -1,7 +1,6 @@
 // Nota:Como el ejercicio 12 es mas un ejemplo que otra cosa no estara aqui, por lo que saltamos directo al 13
 
 
-
 function ValidandoCorreo(email) {
     const Email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return Email.test(email);

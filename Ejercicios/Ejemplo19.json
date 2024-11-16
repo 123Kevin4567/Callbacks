@@ -1,0 +1,16 @@
+{
+    "nombre": "Kevin",
+    "edad": 21,
+    "ciudad": "Giron",
+    "ocupacion": "Aprendiz, Trabajador",
+    "tiempoLibre": "Ojalá tuviera tiempo al menos para jugar",
+    "tieneHobbies": true,
+    "hobbies": ["Fútbol", "Leer", "Videojuegos"],
+
+
+    "detalles": {
+        "experienciaLaboral": true,
+        "cursosCompletados": 5,
+        "activoEnEstudios": true
+    }
+}

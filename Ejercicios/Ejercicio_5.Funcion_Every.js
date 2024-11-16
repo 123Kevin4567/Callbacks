@@ -49,20 +49,20 @@
 
 
 
-// Función para ingresar el nombre y las notas
+
 function ingresarDatos() {
-    // Ingresamos el nombre
+
     const nombre = prompt("Ingrese el nombre del estudiante:");
 
-    // Ingresamos hasta 3 notas
+
     const notas = [];
     for (let i = 1; i <= 3; i++) {
         let nota = prompt(`Ingrese la nota ${i} del estudiante (entre 0 y 10):`);
-        nota = parseFloat(nota); // Convertir la entrada a número
+        nota = parseFloat(nota); 
 
         if (isNaN(nota) || nota < 0 || nota > 10) {
             alert("Nota no válida. Por favor ingrese un valor entre 0 y 10.");
-            i--; // Si la nota es inválida, se repite la iteración
+            i--; 
         } else {
             notas.push(nota);
         }
