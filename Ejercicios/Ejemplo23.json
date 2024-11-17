@@ -1,0 +1,47 @@
+[
+    {
+        "nombre": "Kevin",
+        "edad": 21,
+        "ciudad": "Giron",
+        "ocupacion": "Aprendiz",
+        "hobbies": ["Videojuegos", "Leer", "Futbol"]
+    },
+    {
+        "nombre": "Ana",
+        "intereses": ["Arte", "Danza", "Viajes"],
+        "ocupacion": "Ingeniera",
+        "disponibilidad": true
+    },
+    {
+        "nombre": "Carlos",
+        "ciudad": "Floridablanca",
+        "edad": 34,
+        "estado": "Casado",
+        "hijos": 2
+    },
+    {
+        "nombre": "Andrea",
+        "ocupacion": "Diseñadora",
+        "proyectos": ["Diseño web", "Marketing"],
+        "experiencia": 3
+    },
+    {
+        "nombre": "María",
+        "edad": 19,
+        "estudiante": true,
+        "universidad": "UIS"
+    },
+    {
+        "nombre": "Luis",
+        "edad": 30,
+        "ciudad": "Bucaramanga",
+        "hobbies": ["Viajar", "Cine"],
+        "disponibilidad": false
+    },
+    {
+        "nombre": "Fernando",
+        "edad": 45,
+        "profesion": "Profesor",
+        "publicaciones": ["Libro A", "Libro B"]
+    }
+]

@@ -38,7 +38,10 @@
 // console.log('Resultado:', resultado); 
 
 
-// VERSION RECORTADA
+// // VERSION RECORTADA
+
+
+
 
 
 
@@ -52,7 +55,7 @@
 // console.log('Resultado:', resultado); 
 
 
-//Version final
+// Version final
 
 
 const personas = [

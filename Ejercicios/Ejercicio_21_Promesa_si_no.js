@@ -25,6 +25,8 @@ async function operacionAsincrona() {
         .then((resultados) => {
             document.write("Estado de todas las operaciones: <br>");
             resultados.forEach((resultado, index) => {
+
+                
                 if (resultado.status === "fulfilled") {
                     document.write(`Operación ${index + 1}: ${resultado.value} <br>`);
                 } else if (resultado.status === "rejected") {
@@ -38,4 +40,6 @@ async function operacionAsincrona() {
 }
 
 operacionAsincrona();
+
+
 

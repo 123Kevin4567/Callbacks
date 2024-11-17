@@ -12,6 +12,9 @@ async function validarEdad(usuario) {
 }
 
 
+
+
+
 async function procesarUsuarios(usuarios) {
     for (let i = 0; i < usuarios.length; i++) {
         try {
@@ -22,16 +25,22 @@ async function procesarUsuarios(usuarios) {
             console.log(error); 
         }
     }
+
+
     console.log('Todos los usuarios han sido procesados.');
 }
 
 
-const listaDeUsuarios = [
-    { nombre: 'Carlos', edad: 17 },
-    { nombre: 'Ana', edad: 22 },
-    { nombre: 'Luis', edad: 19 },
-    { nombre: 'María', edad: 16 }
+
+const listaDeUsuarios =
+ [
+    { nombre: 'Juanca', edad: 19 },
+    { nombre: 'Valerie', edad: 22 },
+    { nombre: 'Grille', edad: 19 },
+    { nombre: 'Jhoselin', edad: 21 }
 ];
 
 procesarUsuarios(listaDeUsuarios);
+
+
 
