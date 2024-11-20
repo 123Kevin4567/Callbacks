@@ -127,3 +127,9 @@ console.log("\nResumen:");
 console.log(`Cantidad de estudiantes aprobados: ${cantidadAprobados}`);
 console.log(`Cantidad de estudiantes pendientes: ${cantidadPendientes}`);
 
+
+
+bichito.map( bichito => console.log((nombre)=>{
+
+
+}));

@@ -3,7 +3,7 @@ const fs = require('fs').promises;
 
 async function leerYFiltrarDatos() {
     try {
-        const letra = readlineSync.question("Qué letra deseas usar para filtrar los nombres ?: ").toUpperCase();
+        const letra = readlineSync.question("Que letra deseas usar para filtrar los nombres ?: ").toUpperCase();
 
 
         const data = await fs.readFile('Ejemplo23.json', 'utf8');

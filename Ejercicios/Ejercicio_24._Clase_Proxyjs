@@ -1,0 +1,41 @@
+const persona ={
+    nombre: "Kevin",
+    apellido: "Polo",
+    edad: 21
+}
+
+const propiedadesValidas = Object.keys(persona);
+
+
+const manejador ={
+    get(objetivo, propiedad) {
+        if (!propiedadesValidas.includes(propiedad)) {
+            throw new Error(`La propiedad "${propiedad}" no está permitida.`);
+        }
+        console.log(`Obteniendo la propiedad "${propiedad}"`);
+        return objetivo[propiedad];
+    },
+
+
+    set(objetivo, propiedad, valor) {
+            if (!propiedadesValidas.includes(propiedad)) {
+                throw new Error(`No se puede agregar la propiedad "${propiedad}".`);
+            }
+            if (propiedad === "nombre" && !isNaN(valor)) {
+                throw new Error("El valor de 'nombre' debe ser un texto.");
+            }
+            console.log(`Modificando la propiedad "${propiedad}" con el valor "${valor}"`);
+            objetivo[propiedad] = valor;
+            return true;
+        }
+    };
+
+const proxy = new Proxy(persona,manejador);
+
+proxy.nombre = "1954";
+console.log(proxy.nombre);
+console.log(persona);
+
+
+
+
