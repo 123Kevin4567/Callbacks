@@ -74,9 +74,9 @@ const proxy = new Proxy(persona, manejador);
 
     try {
         
-        proxy.nombre = "Carlos";  
-        proxy.edad = 25;        
-        proxy.email = "correo@dominio.com";   
+        proxy.nombre = "Bichito";  
+        proxy.edad = 21;        
+        proxy.email = "Bchito34@gmail.com";   
         proxy.fecha = "2024-01-01"; 
         console.log(proxy.nombre);
         console.log(persona);
